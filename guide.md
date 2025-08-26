@@ -174,7 +174,13 @@ Linux is, obviously, an extremely solid, reliable, and flexible router. I've bee
 
 If you don't choose to use your server as a router, then your modem will sit on your internal network. In this case you will need to be very careful to turn off your modem's built-in DHCP so that it doesn't fight with the one on your server.
 
-There are many approaches and tools to configure routing on Linux. My approach is to edit `/etc/network/interfaces` to look something like this:
+There are many approaches and tools to configure routing on Linux. Mine is to configure them through ifupdown, Debian's legacy network interface manager. Make sure that it is installed:
+
+```
+apt install ifupdown
+```
+
+Then edit `/etc/network/interfaces` to look something like this:
 
 ```
 # The loopback network interface
