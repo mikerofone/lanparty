@@ -355,7 +355,7 @@ You must also edit `/etc/bind/named.conf.options` to:
 * Specify your upstream nameservers (under `forwarders`). If you aren't sure what they are, check what's written in `/etc/resolv.conf`, or use one of the big public nameservers like Cloudflare's (`1.1.1.1` and `1.0.0.1`) or Google's (`8.8.8.8` and `8.8.4.4`). (Disclosure: I work for Cloudflare.)
 * Change `listen-on` to specify only your internal IP and localhost, so that you aren't exposing your DNS server to the public internet, e.g.:
 
-        listen-on { 10.0.0.1; 127.0.0.1; }
+        listen-on { 10.0.0.1; 127.0.0.1; };
 
 And then reload:
 
