@@ -299,7 +299,7 @@ And then let's configure it. We're going to blow away the existing config, so ba
 
 Take a quick look at `/etc/dhcp/dhcpd.conf` and read the comments. If you plan to set up a DNS server later, then you probably don't need to change anything in here. If you don't plan a DNS server, you'll need to edit the `option domain-name-servers` line.
 
-You also need to edit `/etc/defaults/isc-dhcp-server` and edit the `INTERFACESv4=` line to list your internal network interface.
+You also need to edit `/etc/default/isc-dhcp-server` and edit the `INTERFACESv4=` line to list your internal network interface.
 
 Now restart the server to pick up the new config (it doesn't support `reload`):
 
